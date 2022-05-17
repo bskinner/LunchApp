@@ -13,6 +13,9 @@
 		2524E52B2830942C003DB3F1 /* PlacesApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 2524E51B2830942C003DB3F1 /* PlacesApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2524E52E2830942C003DB3F1 /* PlacesApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2524E5192830942C003DB3F1 /* PlacesApi.framework */; };
 		2524E52F2830942C003DB3F1 /* PlacesApi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2524E5192830942C003DB3F1 /* PlacesApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2524E53A2831D73A003DB3F1 /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 2524E5392831D73A003DB3F1 /* TinyConstraints */; };
+		2524E53D2831DBB8003DB3F1 /* AtLunchHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524E53C2831DBB8003DB3F1 /* AtLunchHeader.swift */; };
+		2524E53F2831EC5F003DB3F1 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524E53E2831EC5F003DB3F1 /* XCAssets+Generated.swift */; };
 		25DCF1E02829F93E001494A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DCF1DF2829F93E001494A2 /* AppDelegate.swift */; };
 		25DCF1E22829F93E001494A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DCF1E12829F93E001494A2 /* SceneDelegate.swift */; };
 		25DCF1E42829F93E001494A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DCF1E32829F93E001494A2 /* ViewController.swift */; };
@@ -87,6 +90,8 @@
 		2524E51C2830942C003DB3F1 /* PlacesApi.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = PlacesApi.docc; sourceTree = "<group>"; };
 		2524E5222830942C003DB3F1 /* PlacesApiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlacesApiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2524E5292830942C003DB3F1 /* PlacesApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesApiTests.swift; sourceTree = "<group>"; };
+		2524E53C2831DBB8003DB3F1 /* AtLunchHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtLunchHeader.swift; sourceTree = "<group>"; };
+		2524E53E2831EC5F003DB3F1 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "XCAssets+Generated.swift"; path = "LunchApp/XCAssets+Generated.swift"; sourceTree = SOURCE_ROOT; };
 		25DCF1DC2829F93E001494A2 /* LunchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25DCF1DF2829F93E001494A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25DCF1E12829F93E001494A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2524E52E2830942C003DB3F1 /* PlacesApi.framework in Frameworks */,
+				2524E53A2831D73A003DB3F1 /* TinyConstraints in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +156,7 @@
 		2524E5122830272C003DB3F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2524E53E2831EC5F003DB3F1 /* XCAssets+Generated.swift */,
 				2524E51328302758003DB3F1 /* SecretsDebug.xcconfig */,
 			);
 			path = Resources;
@@ -171,6 +178,21 @@
 				2524E5292830942C003DB3F1 /* PlacesApiTests.swift */,
 			);
 			path = PlacesApiTests;
+			sourceTree = "<group>";
+		};
+		2524E5372831D1D0003DB3F1 /* Places List */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Places List";
+			sourceTree = "<group>";
+		};
+		2524E53B2831DAB5003DB3F1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2524E53C2831DBB8003DB3F1 /* AtLunchHeader.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		25DCF1D32829F93E001494A2 = {
@@ -235,6 +257,7 @@
 		25DCF20F282C923D001494A2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2524E5372831D1D0003DB3F1 /* Places List */,
 				25DCF210282C9A27001494A2 /* AtLunch */,
 			);
 			path = Views;
@@ -243,6 +266,7 @@
 		25DCF210282C9A27001494A2 /* AtLunch */ = {
 			isa = PBXGroup;
 			children = (
+				2524E53B2831DAB5003DB3F1 /* Views */,
 				25DCF211282C9B1C001494A2 /* AtLunchViewController.swift */,
 			);
 			path = AtLunch;
@@ -354,6 +378,9 @@
 				2524E52D2830942C003DB3F1 /* PBXTargetDependency */,
 			);
 			name = LunchApp;
+			packageProductDependencies = (
+				2524E5392831D73A003DB3F1 /* TinyConstraints */,
+			);
 			productName = LunchApp;
 			productReference = 25DCF1DC2829F93E001494A2 /* LunchApp.app */;
 			productType = "com.apple.product-type.application";
@@ -433,6 +460,9 @@
 				Base,
 			);
 			mainGroup = 25DCF1D32829F93E001494A2;
+			packageReferences = (
+				2524E5382831D73A003DB3F1 /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+			);
 			productRefGroup = 25DCF1DD2829F93E001494A2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -508,12 +538,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2524E53F2831EC5F003DB3F1 /* XCAssets+Generated.swift in Sources */,
 				25DCF21B28301099001494A2 /* PlacesClient.swift in Sources */,
 				25DCF212282C9B1D001494A2 /* AtLunchViewController.swift in Sources */,
 				25DCF1E42829F93E001494A2 /* ViewController.swift in Sources */,
 				25DCF217282CA0D0001494A2 /* PlaceTypes.swift in Sources */,
 				25DCF1E02829F93E001494A2 /* AppDelegate.swift in Sources */,
 				25DCF1E22829F93E001494A2 /* SceneDelegate.swift in Sources */,
+				2524E53D2831DBB8003DB3F1 /* AtLunchHeader.swift in Sources */,
 				25DCF21D283011C0001494A2 /* PlacesTypes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -986,6 +1018,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2524E5382831D73A003DB3F1 /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2524E5392831D73A003DB3F1 /* TinyConstraints */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2524E5382831D73A003DB3F1 /* XCRemoteSwiftPackageReference "TinyConstraints" */;
+			productName = TinyConstraints;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 25DCF1D42829F93E001494A2 /* Project object */;
 }

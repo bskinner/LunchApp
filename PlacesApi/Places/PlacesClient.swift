@@ -8,7 +8,7 @@
 import Foundation
 
 class PlacesClient {
-    public private(set) let apiBase: URL
+    public let apiBase: URL
     private let configuration: URLSessionConfiguration
     private let session: URLSession
 
@@ -21,5 +21,5 @@ class PlacesClient {
 
 
 extension PlacesClient {
-    public func findPlace(text: String, fields: PlaceFields, )
+    
 }

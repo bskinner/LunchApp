@@ -17,8 +17,8 @@ protocol Request: Encodable {
     associatedtype Response: Decodable
     associatedtype Payload: Encodable
 
-    var method: HttpMethod
-    var path: String
+    var method: HttpMethod { get }
+    var path: String { get }
 
 }
 
@@ -36,48 +36,41 @@ public enum Status: String {
 }
 
 
-public struct PlaceFields: OptionSet {
-    public var rawValue: String
+public enum PlaceField: String {
 
     // Basic
-    static let addressComponent = PlaceFields(rawValue: "address_component")
-    static let adrAddress = PlaceFields(rawValue: "adr_address")
-    static let businessStatus = PlaceFields(rawValue: "business_status")
-    static let formattedAddress = PlaceFields(rawValue: "formatted_address")
-    static let geometry = PlaceFields(rawValue: "geometry")
-    static let icon = PlaceFields(rawValue: "icon")
-    static let iconMaskBaseURI = PlaceFields(rawValue: "icon_mask_base_uri")
-    static let iconBackgroundColor = PlaceFields(rawValue: "icon_background_color")
-    static let name = PlaceFields(rawValue: "name")
-    static let photo = PlaceFields(rawValue: "photo")
-    static let placeId = PlaceFields(rawValue: "placeId")
-    static let plusCode = PlaceFields(rawValue: "plusCode")
-    static let type = PlaceFields(rawValue: "type")
-    static let url = PlaceFields(rawValue: "url")
-    static let utcOffset = PlaceFields(rawValue: "utc_offset")
-    static let vicinity = PlaceFields(rawValue: "vicinity")
+    case addressComponent = "address_component"
+    case adrAddress = "adr_address"
+    case businessStatus = "business_status"
+    case formattedAddress = "formatted_address"
+    case geometry = "geometry"
+    case icon = "icon"
+    case iconMaskBaseURI = "icon_mask_base_uri"
+    case iconBackgroundColor = "icon_background_color"
+    case name = "name"
+    case photo = "photo"
+    case placeId = "placeId"
+    case plusCode = "plusCode"
+    case type = "type"
+    case url = "url"
+    case utcOffset = "utc_offset"
+    case vicinity = "vicinity"
 
     // Contact
-    static let formattedPhoneNumber = PlaceFields(rawValue: "formatted_phone_number")
-    static let internationalPhoneNumber = PlaceFields(rawValue: "international_phone_number")
-    static let openingHours = PlaceFields(rawValue: "opening_hours")
-    static let website = PlaceFields(rawValue: "website")
+    case formattedPhoneNumber = "formatted_phone_number"
+    case internationalPhoneNumber = "international_phone_number"
+    case openingHours = "opening_hours"
+    case website = "website"
 
     // Atmosphere
-    static let priceLevel = PlaceFields(rawValue: "price_level")
-    static let rating = PlaceFields(rawValue: "rating")
-    static let review = PlaceFields(rawValue: "review")
-    static let userRatingsTotal = PlaceFields(rawValue: "user_ratings_total")
-
-
-    init(rawValue: Self.RawValue) {
-        self.rawValue = rawValue
-    }
-
+    case priceLevel = "price_level"
+    case rating = "rating"
+    case review = "review"
+    case userRatingsTotal = "user_ratings_total"
 }
 
 protocol PlacesResponse: Decodable {
-    var status: Status
+    var status: Status { get }
 }
 
 /*
@@ -97,5 +90,5 @@ struct PlacesResponse<ResultType: Decodable>: Decodable {
 */
 
 public enum GooglePlaces {
-    case
+
 }
