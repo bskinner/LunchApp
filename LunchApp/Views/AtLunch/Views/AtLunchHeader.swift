@@ -5,6 +5,7 @@
 //  Created by Blake Skinner on 5/15/22.
 //
 
+import TinyConstraints
 import UIKit
 
 class AtLunchHeader: UIView {
@@ -29,7 +30,7 @@ class AtLunchHeader: UIView {
 // MARK: Internal Methods
 extension AtLunchHeader {
     private func setupView() {
-        imageView.image = Asset.atlLogo.image
+        imageView.image = Asset.Images.atlLogo.image
         addSubview(imageView)
 
         filterButton.setTitle(L10n.Button.Filter.title, for: .normal)
