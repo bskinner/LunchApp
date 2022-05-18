@@ -22,21 +22,7 @@ protocol Request: Encodable {
 
 }
 
-/*struct Request<Body: Encodable,Response> {
-    var method: HttpMethod
-    var path: String
-    var query: [String: String]?
-    var body: Body
-}*/
-
-public enum Status: String {
-    case ok = "OK"
-    case invalidRequest = "INVALID_REQUEST"
-    case notFound = "NOT_FOUND"
-}
-
-
-public enum PlaceField: String {
+public enum PlacesField: String {
 
     // Basic
     case addressComponent = "address_component"
@@ -69,26 +55,60 @@ public enum PlaceField: String {
     case userRatingsTotal = "user_ratings_total"
 }
 
-protocol PlacesResponse: Decodable {
-    var status: Status { get }
-}
-
-/*
-struct PlacesResponse<ResultType: Decodable>: Decodable {
-    enum CodingKeys: String, CodingKey {
-        case htmlAttributions = "html_attributions"
-        case nextPageToken = "next_page_token"
-        case results
-        case status
+enum PlacesSearch {}
+extension PlacesSearch {
+    public enum Status: String, Codable {
+        case ok = "OK"
+        case invalidRequest = "INVALID_REQUEST"
+        case notFound = "NOT_FOUND"
     }
 
-    var htmlAttributions: [String]
-    var nextPageToken: String
-    var results: [ResultType]
-    var status: String
+    public struct Response: Codable {
+        enum CodingKeys: String, CodingKey {
+            case htmlAttributions = "html_attributions"
+            case nextPageToken = "next_page_token"
+            case results
+            case status
+        }
+
+        var htmlAttributions: [String]
+        var nextPageToken: String
+        var results: [Result]
+        var status: Status
+    }
+
+    // Eeeeee- think of another name here. I'd rather not
+    // risk potential confusion with the Result<Success,Error> type
+    // Maybe PlacesResult? (even though it is repetitive)
+    public struct Result: Codable {
+        private enum CodingKeys: String, CodingKey {
+            case reference = "place_id"
+            case name
+        }
+
+        let reference: String
+        let name: String
+        // 🤷🏻
+    }
+
+    public struct OpeningHours {
+        let openNow: Bool
+    }
 }
-*/
 
-public enum GooglePlaces {
+enum PlacesDetails {}
+extension PlacesDetails {
+    public enum Status: String, Codable {
+        case ok = "OK"
+        case zeroResults = "ZERO_RESULTS"
+        case invalidRequest = "INVALID_REQUEST"
+        case notFound = "NOT_FOUND"
+        case overQueryLimit = "OVER_QUERY_LIMIT"
+        case requestDenied = "REQUEST_DENIED"
+        case unknownError = "UNKNOWN_ERROR"
+    }
 
+    public struct Details {
+
+    }
 }
