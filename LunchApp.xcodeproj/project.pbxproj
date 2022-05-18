@@ -31,10 +31,12 @@
 		25DCF2032829F93F001494A2 /* LunchAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DCF2022829F93F001494A2 /* LunchAppUITestsLaunchTests.swift */; };
 		25DCF212282C9B1D001494A2 /* AtLunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DCF211282C9B1C001494A2 /* AtLunchViewController.swift */; };
 		25DCF217282CA0D0001494A2 /* PlaceTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DCF216282CA0D0001494A2 /* PlaceTypes.swift */; };
-		25DCF21B28301099001494A2 /* PlacesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DCF21A28301099001494A2 /* PlacesClient.swift */; };
-		25DCF21D283011C0001494A2 /* PlacesTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DCF21C283011C0001494A2 /* PlacesTypes.swift */; };
 		25F5035828346A7B00F4484F /* PlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F5035728346A7B00F4484F /* PlaceView.swift */; };
 		25F5035A28346BB000F4484F /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F5035928346BB000F4484F /* StarRatingView.swift */; };
+		25F5035E283493FF00F4484F /* PlacesRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F5035D283493FF00F4484F /* PlacesRoutes.swift */; };
+		25F5036028349A2600F4484F /* PlacesRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F5035F28349A2600F4484F /* PlacesRequests.swift */; };
+		25F5036128349C2D00F4484F /* PlacesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DCF21A28301099001494A2 /* PlacesClient.swift */; };
+		25F5036428349C3200F4484F /* PlacesTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DCF21C283011C0001494A2 /* PlacesTypes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +122,8 @@
 		25DCF21C283011C0001494A2 /* PlacesTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTypes.swift; sourceTree = "<group>"; };
 		25F5035728346A7B00F4484F /* PlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceView.swift; sourceTree = "<group>"; };
 		25F5035928346BB000F4484F /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
+		25F5035D283493FF00F4484F /* PlacesRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesRoutes.swift; sourceTree = "<group>"; };
+		25F5035F28349A2600F4484F /* PlacesRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesRequests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,6 +336,8 @@
 			children = (
 				25DCF21A28301099001494A2 /* PlacesClient.swift */,
 				25DCF21C283011C0001494A2 /* PlacesTypes.swift */,
+				25F5035D283493FF00F4484F /* PlacesRoutes.swift */,
+				25F5035F28349A2600F4484F /* PlacesRequests.swift */,
 			);
 			path = Places;
 			sourceTree = "<group>";
@@ -579,7 +585,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25F5036128349C2D00F4484F /* PlacesClient.swift in Sources */,
 				2524E51D2830942C003DB3F1 /* PlacesApi.docc in Sources */,
+				25F5036028349A2600F4484F /* PlacesRequests.swift in Sources */,
+				25F5035E283493FF00F4484F /* PlacesRoutes.swift in Sources */,
+				25F5036428349C3200F4484F /* PlacesTypes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,7 +607,6 @@
 			files = (
 				25414161283334B6007EBB9E /* Strings+Generated.swift in Sources */,
 				2524E53F2831EC5F003DB3F1 /* XCAssets+Generated.swift in Sources */,
-				25DCF21B28301099001494A2 /* PlacesClient.swift in Sources */,
 				25DCF212282C9B1D001494A2 /* AtLunchViewController.swift in Sources */,
 				25DCF1E42829F93E001494A2 /* ViewController.swift in Sources */,
 				25F5035828346A7B00F4484F /* PlaceView.swift in Sources */,
@@ -608,7 +617,6 @@
 				25DCF1E22829F93E001494A2 /* SceneDelegate.swift in Sources */,
 				2541416728333DBD007EBB9E /* PlacesMapViewController.swift in Sources */,
 				2524E53D2831DBB8003DB3F1 /* AtLunchHeader.swift in Sources */,
-				25DCF21D283011C0001494A2 /* PlacesTypes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -885,6 +893,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2524E51328302758003DB3F1 /* SecretsDebug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -912,6 +921,7 @@
 		25DCF2082829F93F001494A2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;

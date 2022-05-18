@@ -7,21 +7,6 @@
 
 import Foundation
 
-enum HttpMethod: String {
-    case get
-    case post
-    case put
-}
-
-protocol Request: Encodable {
-    associatedtype Response: Decodable
-    associatedtype Payload: Encodable
-
-    var method: HttpMethod { get }
-    var path: String { get }
-
-}
-
 public enum PlacesField: String {
 
     // Basic
@@ -88,7 +73,7 @@ extension PlacesSearch {
 
         let reference: String
         let name: String
-        // 🤷🏻
+        // More fields to add here later
     }
 
     public struct OpeningHours {
