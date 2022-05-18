@@ -24,14 +24,18 @@ class AtLunchHeader: UIView {
         setupView()
     }
 
+}
 
+// MARK: Internal Methods
+extension AtLunchHeader {
     private func setupView() {
         imageView.image = Asset.atlLogo.image
         addSubview(imageView)
 
-        filterButton.setTitle(<#T##title: String?##String?#>, for: <#T##UIControl.State#>)
+        filterButton.setTitle(L10n.Button.Filter.title, for: .normal)
+        addSubview(filterButton)
 
-
-
+        searchField.placeholder = L10n.Field.Search.placeholder
+        addSubview(searchField)
     }
 }
