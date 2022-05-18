@@ -368,6 +368,7 @@
 			buildConfigurationList = 25DCF2062829F93F001494A2 /* Build configuration list for PBXNativeTarget "LunchApp" */;
 			buildPhases = (
 				25DCF1D82829F93E001494A2 /* Sources */,
+				25F5035B283471E700F4484F /* Run swiftlint */,
 				25DCF1D92829F93E001494A2 /* Frameworks */,
 				25DCF1DA2829F93E001494A2 /* Resources */,
 				2524E5332830942C003DB3F1 /* Embed Frameworks */,
@@ -516,6 +517,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25F5035B283471E700F4484F /* Run swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run swiftlint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\nif which swiftlint > /dev/null; then\n  swiftlint --path LunchApp\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2524E5152830942C003DB3F1 /* Sources */ = {
