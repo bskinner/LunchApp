@@ -22,15 +22,22 @@ internal typealias AssetImageTypeAlias = ImageAsset.Image
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
   internal static let accentColor = ColorAsset(name: "AccentColor")
-  internal static let atlLogo = ImageAsset(name: "atl-logo")
-  internal static let favoriateSelected = ImageAsset(name: "favoriate-selected")
-  internal static let favoriate = ImageAsset(name: "favoriate")
-  internal static let mapPinSelected = ImageAsset(name: "map-pin-selected")
-  internal static let mapPin = ImageAsset(name: "map-pin")
-  internal static let starLargeHighlighted = ImageAsset(name: "star-large-highlighted")
-  internal static let starLarge = ImageAsset(name: "star-large")
-  internal static let starSmallHighlighted = ImageAsset(name: "star-small-highlighted")
-  internal static let starSmall = ImageAsset(name: "star-small")
+  internal enum Colors {
+    internal static let lightTextColor = ColorAsset(name: "Colors/LightTextColor")
+    internal static let lighterTextColor = ColorAsset(name: "Colors/LighterTextColor")
+    internal static let textColor = ColorAsset(name: "Colors/TextColor")
+  }
+  internal enum Images {
+    internal static let atlLogo = ImageAsset(name: "Images/atl-logo")
+    internal static let favoriateSelected = ImageAsset(name: "Images/favoriate-selected")
+    internal static let favoriate = ImageAsset(name: "Images/favoriate")
+    internal static let mapPinSelected = ImageAsset(name: "Images/map-pin-selected")
+    internal static let mapPin = ImageAsset(name: "Images/map-pin")
+    internal static let starLargeHighlighted = ImageAsset(name: "Images/star-large-highlighted")
+    internal static let starLarge = ImageAsset(name: "Images/star-large")
+    internal static let starSmallHighlighted = ImageAsset(name: "Images/star-small-highlighted")
+    internal static let starSmall = ImageAsset(name: "Images/star-small")
+  }
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
