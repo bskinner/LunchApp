@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  LunchApp
+
+  Created by Blake on 2022/5/16.
+  
+*/
+
+"Button.Filter.Title" = "Filter";
+"Field.Search.Placeholder" = "Search for a restaurant";
