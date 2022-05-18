@@ -123,3 +123,6 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+
+## Project-specific
+SecretsDebug.xcconfig
