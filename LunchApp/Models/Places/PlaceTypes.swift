@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 public enum Places {}
 
 extension Places {
@@ -20,6 +19,6 @@ extension Places {
     }
 
     public enum RankBy: String {
-        case prominence = "prominence"
+        case prominence
     }
 }
