@@ -20,7 +20,9 @@
 		25414161283334B6007EBB9E /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25414160283334B5007EBB9E /* Strings+Generated.swift */; };
 		2541416428333D88007EBB9E /* PlacesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2541416328333D88007EBB9E /* PlacesListViewController.swift */; };
 		2541416728333DBD007EBB9E /* PlacesMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2541416628333DBD007EBB9E /* PlacesMapViewController.swift */; };
-		2541416A283340AC007EBB9E /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 25414169283340AC007EBB9E /* Logging */; };
+		254582A0284863B300C4D5AE /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 2545829F284863B300C4D5AE /* Logging */; };
+		254582A22848641C00C4D5AE /* Secrets.xcconfig.example in Resources */ = {isa = PBXBuildFile; fileRef = 254582A12848641C00C4D5AE /* Secrets.xcconfig.example */; };
+		254582A5284865E100C4D5AE /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 254582A4284865E100C4D5AE /* Logging */; };
 		25DCF1E02829F93E001494A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DCF1DF2829F93E001494A2 /* AppDelegate.swift */; };
 		25DCF1E22829F93E001494A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DCF1E12829F93E001494A2 /* SceneDelegate.swift */; };
 		25DCF1E42829F93E001494A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DCF1E32829F93E001494A2 /* ViewController.swift */; };
@@ -92,7 +94,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2524E51328302758003DB3F1 /* SecretsDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SecretsDebug.xcconfig; sourceTree = "<group>"; };
 		2524E5192830942C003DB3F1 /* PlacesApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlacesApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2524E51B2830942C003DB3F1 /* PlacesApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlacesApi.h; sourceTree = "<group>"; };
 		2524E51C2830942C003DB3F1 /* PlacesApi.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = PlacesApi.docc; sourceTree = "<group>"; };
@@ -104,6 +105,9 @@
 		25414160283334B5007EBB9E /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Strings+Generated.swift"; path = "LunchApp/Resources/Strings+Generated.swift"; sourceTree = SOURCE_ROOT; };
 		2541416328333D88007EBB9E /* PlacesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlacesListViewController.swift; path = "LunchApp/Views/Places (list)/PlacesListViewController.swift"; sourceTree = SOURCE_ROOT; };
 		2541416628333DBD007EBB9E /* PlacesMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesMapViewController.swift; sourceTree = "<group>"; };
+		254582A12848641C00C4D5AE /* Secrets.xcconfig.example */ = {isa = PBXFileReference; lastKnownFileType = text; path = Secrets.xcconfig.example; sourceTree = "<group>"; };
+		254582A72848680800C4D5AE /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		254582A82848693100C4D5AE /* Development.secret.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.secret.xcconfig; sourceTree = "<group>"; };
 		25DCF1DC2829F93E001494A2 /* LunchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25DCF1DF2829F93E001494A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25DCF1E12829F93E001494A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				254582A0284863B300C4D5AE /* Logging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2541416A283340AC007EBB9E /* Logging in Frameworks */,
+				254582A5284865E100C4D5AE /* Logging in Frameworks */,
 				2524E52E2830942C003DB3F1 /* PlacesApi.framework in Frameworks */,
 				2524E53A2831D73A003DB3F1 /* TinyConstraints in Frameworks */,
 			);
@@ -172,9 +177,9 @@
 		2524E5122830272C003DB3F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				254582A6284867DB00C4D5AE /* Configs */,
 				25414160283334B5007EBB9E /* Strings+Generated.swift */,
 				2524E53E2831EC5F003DB3F1 /* XCAssets+Generated.swift */,
-				2524E51328302758003DB3F1 /* SecretsDebug.xcconfig */,
 				2541415E283332F1007EBB9E /* Localizable.strings */,
 			);
 			path = Resources;
@@ -222,6 +227,23 @@
 			path = "Places (map)";
 			sourceTree = "<group>";
 		};
+		2545829E284863B300C4D5AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		254582A6284867DB00C4D5AE /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				254582A12848641C00C4D5AE /* Secrets.xcconfig.example */,
+				254582A72848680800C4D5AE /* Development.xcconfig */,
+				254582A82848693100C4D5AE /* Development.secret.xcconfig */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
 		25DCF1D32829F93E001494A2 = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +253,7 @@
 				2524E51A2830942C003DB3F1 /* PlacesApi */,
 				2524E5282830942C003DB3F1 /* PlacesApiTests */,
 				25DCF1DD2829F93E001494A2 /* Products */,
+				2545829E284863B300C4D5AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -379,6 +402,9 @@
 			dependencies = (
 			);
 			name = PlacesApi;
+			packageProductDependencies = (
+				2545829F284863B300C4D5AE /* Logging */,
+			);
 			productName = PlacesApi;
 			productReference = 2524E5192830942C003DB3F1 /* PlacesApi.framework */;
 			productType = "com.apple.product-type.framework";
@@ -420,7 +446,7 @@
 			name = LunchApp;
 			packageProductDependencies = (
 				2524E5392831D73A003DB3F1 /* TinyConstraints */,
-				25414169283340AC007EBB9E /* Logging */,
+				254582A4284865E100C4D5AE /* Logging */,
 			);
 			productName = LunchApp;
 			productReference = 25DCF1DC2829F93E001494A2 /* LunchApp.app */;
@@ -539,6 +565,7 @@
 			files = (
 				25DCF1EC2829F93F001494A2 /* LaunchScreen.storyboard in Resources */,
 				2541415F283332F1007EBB9E /* Localizable.strings in Resources */,
+				254582A22848641C00C4D5AE /* Secrets.xcconfig.example in Resources */,
 				25DCF1E92829F93F001494A2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -891,14 +918,14 @@
 		};
 		25DCF2072829F93F001494A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2524E51328302758003DB3F1 /* SecretsDebug.xcconfig */;
+			baseConfigurationReference = 254582A72848680800C4D5AE /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L9W5HH9VYD;
+				DEVELOPMENT_TEAM = D52A67XHNN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LunchApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -926,7 +953,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L9W5HH9VYD;
+				DEVELOPMENT_TEAM = D52A67XHNN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LunchApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1106,7 +1133,12 @@
 			package = 2524E5382831D73A003DB3F1 /* XCRemoteSwiftPackageReference "TinyConstraints" */;
 			productName = TinyConstraints;
 		};
-		25414169283340AC007EBB9E /* Logging */ = {
+		2545829F284863B300C4D5AE /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25414168283340AC007EBB9E /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+		254582A4284865E100C4D5AE /* Logging */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 25414168283340AC007EBB9E /* XCRemoteSwiftPackageReference "swift-log" */;
 			productName = Logging;

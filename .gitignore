@@ -125,4 +125,4 @@ fastlane/test_output
 iOSInjectionProject/
 
 ## Project-specific
-SecretsDebug.xcconfig
+*.secret.xcconfig

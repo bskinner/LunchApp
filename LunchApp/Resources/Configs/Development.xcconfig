@@ -1,0 +1,10 @@
+//
+//  Development.xcconfig
+//  LunchApp
+//
+//  Created by Blake Skinner on 6/1/22.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+#include "Development.secret.xcconfig"
