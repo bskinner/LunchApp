@@ -107,9 +107,6 @@ extension PlaceView {
         informationStack.alignment = .leading
         informationStack.distribution = .fillProportionally
 
-        costIndication.font = UIFont.preferredFont(forTextStyle: <#T##UIFont.TextStyle#>)
-        separator
-        supportingText
 
 
         let rootStackView = UIStackView()
