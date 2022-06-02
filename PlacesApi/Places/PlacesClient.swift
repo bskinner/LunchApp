@@ -9,6 +9,7 @@ import Foundation
 
 public enum PlacesError: Error {
     case unknownError(reason: String)
+    case requestError(cause: Error)
 }
 
 public class PlacesClient {
@@ -47,6 +48,24 @@ public class PlacesClient {
 
         urlRequest.url = urlWithKey
 
+        session.dataTask(with: urlRequest) { data, response, error in
+            if let error = error {
+                completion(.failure(.requestError(cause: error)))
+                return
+            }
+
+            guard let data = data else {
+                completion(.failure(.unknownError(reason: "no data available")))
+                return
+            }
+
+            do {
+                let jsonObject = try request.decode(data: data)
+                completion(.success(jsonObject))
+            } catch let decodeError {
+                completion(.failure(.requestError(cause: decodeError)))
+            }
+        }
     }
 }
 

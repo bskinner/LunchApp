@@ -44,20 +44,13 @@ enum HttpMethod: String {
 
 typealias RequestType = Requestable & Respondable
 
-protocol Requestable {
-    var endpoint: Endpoint { get }
-    var route: String { get }
-    var method: HttpMethod { get }
-    func request(for base: URL) throws -> URLRequest
-}
-
 // MARK: -
 protocol Respondable {
-    associatedtype ResponseType
+    associatedtype ResponseType: Decodable
     func decode(data: Data) throws -> ResponseType
 }
 
-extension Respondable where ResponseType: Decodable {
+extension Respondable {
     func decode(data: Data) throws -> ResponseType {
         let decoder = JSONDecoder()
         let response = try decoder.decode(ResponseType.self, from: data)
@@ -66,6 +59,13 @@ extension Respondable where ResponseType: Decodable {
 }
 
 // MARK: -
+protocol Requestable {
+    var endpoint: Endpoint { get }
+    var route: String { get }
+    var method: HttpMethod { get }
+    func request(for base: URL) throws -> URLRequest
+}
+
 protocol JsonRequestable: Requestable {
     associatedtype ContentType: Encodable
     var body: ContentType { get }
@@ -101,4 +101,14 @@ extension JsonRequestable {
 
         return request
     }
+}
+
+// MARK: -
+/// Provides an interface for declaring initializing an object with a Decodable. This is used in the Service layer
+/// to aid in providing a generic way to map raw API responses to data model objects.
+// Needs a better name. A much better name.
+protocol DecodableInitializable {
+    associatedtype DecodableType: Decodable
+
+    init(decoded: DecodableType) throws
 }
